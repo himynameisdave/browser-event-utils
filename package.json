@@ -1,0 +1,32 @@
+{
+    "name": "browser-event-utils",
+    "version": "1.0.0",
+    "description": "A collection of utilities for calling common browser event methods",
+    "main": "bin/index.js",
+    "unpkg": "bin/index.min.js",
+    "scripts": {
+        "lint": "eslint ./src/ --ext .js",
+        "test": "jest"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.14.1",
+        "eslint-config-7geese": "^2.1.1",
+        "eslint-plugin-filenames": "^1.3.2",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jest": "^22.3.0",
+        "jest": "^24.1.0",
+        "np": "^4.0.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/himynameisdave/browser-event-utils.git"
+    },
+    "author": {
+        "name": "himynameisdave",
+        "email": "d@velunny.com"
+    },
+    "homepage": "https://github.com/himynameisdave/browser-event-utils#readme",
+    "license": "MIT"
+}
