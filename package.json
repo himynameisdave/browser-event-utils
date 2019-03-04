@@ -22,7 +22,8 @@
         "build": "rollup -c",
         "lint": "eslint ./src/ --ext .js",
         "lint:fix": "eslint ./src/ --ext .js --fix",
-        "test:js": "jest",
+        "test:js": "jest --coverage",
+        "viewCoverage": "npm run test:js && open ./coverage/lcov-report/index.html -a Google\\ Chrome",
         "test:watch": "jest --watch",
         "test": "npm outdated && npm run lint",
         "release": "np --no-yarn"
