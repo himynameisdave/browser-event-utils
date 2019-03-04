@@ -12,7 +12,13 @@
         "7geese/rules/jsx-a11y/off",
         "7geese/rules/promise/off",
         "7geese/rules/react/off",
+        "7geese/rules/jest/on",
         "7geese/rules/react-hooks/off"
     ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
     "rules": {}
 }
