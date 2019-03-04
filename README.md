@@ -79,4 +79,4 @@ Feel free to [file an issue](https://github.com/himynameisdave/browser-event-uti
 
 ---
 
-> _👌 Built by [Dave Lunny](http://himynameisdave.com) in the glorious year 2019._
+_👌 Built by [Dave Lunny](http://himynameisdave.com) in the glorious year 2019._
