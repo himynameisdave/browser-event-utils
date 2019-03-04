@@ -24,7 +24,7 @@
         "lint:fix": "eslint ./src/ --ext .js --fix",
         "test:js": "jest",
         "test:watch": "jest --watch",
-        "test": "npm outdated && npm run lint && npm run test:js",
+        "test": "npm outdated && npm run lint",
         "release": "np --no-yarn"
     },
     "devDependencies": {
