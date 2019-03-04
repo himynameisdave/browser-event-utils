@@ -20,5 +20,7 @@
         "sourceType": "module",
         "allowImportExportEverywhere": true
     },
-    "rules": {}
+    "rules": {
+        "jest/prefer-called-with": "off"
+    }
 }
