@@ -1,5 +1,5 @@
 language: node_js
 node_js: "10"
 cache: yarn
-# after_success:
-#   - yarn run test-coverage
+after_success:
+  - yarn run test:coverage
