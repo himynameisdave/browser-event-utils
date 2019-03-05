@@ -11,7 +11,9 @@
         <a href="https://bundlephobia.com/result?p=browser-event-utils">
             <img src="https://img.shields.io/bundlephobia/min/browser-event-utils.svg" alt="Bundle size (minified)" />
         </a>
-        <!-- <img src="https://img.shields.io/npm/dt/browser-event-utils.svg" alt="Downloads"> -->
+        <a href="https://www.npmjs.com/package/browser-event-utils">
+            <img src="https://img.shields.io/npm/dt/browser-event-utils.svg" alt="Downloads">
+        </a>
     </div>
 </div>
 
@@ -51,6 +53,53 @@ This will expose a `browserEventUtils` global, on which you will find all of the
 
 ### Usage
 
+These utilities are designed to "wrap" around your regular event handlers (ie: they return your event handler with some kind of super power). They can be used with vanilla Javascript, or with pretty much any framework which deals with DOM events.
+
+1. [`withPreventDefault`](#withPreventDefault)
+1. [`withStopPropagation`](#withStopPropagation)
+1. [`withStopImmediatePropagation`](#withStopImmediatePropagation)
+1. [`withTargetValue`](#withTargetValue)
+
+### withPreventDefault
+
+Calls `event.preventDefault`, then passes the event along to your provided event handler function.
+
+**Vanilla**
+
+```js
+import { withPreventDefault } from 'browser-event-utils';
+
+document.addEventListener('click', withPreventDefault(event => { // 👈 Note that you still get the event object if you need it
+    //  ...handle click event...
+}));
+```
+
+**React**
+
+```jsx
+import React, { Component } from 'react';
+import { withPreventDefault } from 'browser-event-utils';
+
+class MyButton extends Component {
+
+    handleClick = withPreventDefault((event) => {
+        console.log('Button was clicked, and preventDefault has been called!');
+    });
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                My Button
+            </button>
+        );
+    }
+}
+```
+### withStopPropagation
+
+Calls `event.stopPropagation`, then passes the event along to your provided event handler function.
+
+**Vanilla**
 
 ```js
 import { withStopPropagation } from 'browser-event-utils';
@@ -60,22 +109,15 @@ document.addEventListener('click', withStopPropagation(event => { // 👈 Note t
 }));
 ```
 
-You can use this with React like so:
+**React**
 
-```js
-import { withPreventDefault } from 'browser-event-utils';
+```jsx
+import React, { Component } from 'react';
+import { withStopPropagation } from 'browser-event-utils';
 
-//  Doing it directly in a function component
-const Button = ({ onClick }) => (
-    <button onClick={withPreventDefault(onClick)}>
-        My Button
-    </button>
-);
-
-//  Storing it as a class method
 class MyButton extends Component {
 
-    handleClick = withPreventDefault(() => {
+    handleClick = withStopPropagation((event) => {
         console.log('Button was clicked, and preventDefault has been called!');
     });
 
@@ -84,6 +126,77 @@ class MyButton extends Component {
             <button onClick={this.handleClick}>
                 My Button
             </button>
+        );
+    }
+}
+```
+
+### withStopImmediatePropagation
+
+Calls `event.stopImmediatePropagation`, then passes the event along to your provided event handler function.
+
+**Vanilla**
+
+```js
+import { withStopImmediatePropagation } from 'browser-event-utils';
+
+document.addEventListener('click', withStopImmediatePropagation(event => { // 👈 Note that you still get the event object if you need it
+    //  ...handle click event...
+}));
+```
+
+**React**
+
+```jsx
+import React, { Component } from 'react';
+import { withStopImmediatePropagation } from 'browser-event-utils';
+
+class MyButton extends Component {
+
+    handleClick = withStopImmediatePropagation((event) => {
+        console.log('Button was clicked, and preventDefault has been called!');
+    });
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                My Button
+            </button>
+        );
+    }
+}
+```
+
+### withTargetValue
+
+Calls your provided event handler function with `event.target.value` as the first value (if it exists).
+
+**Vanilla**
+
+```js
+import { withTargetValue } from 'browser-event-utils';
+
+
+myInputNode.addEventListener('change', withTargetValue((value, event) => { // 👈 Note that you still get the event object if you need it
+    //  ...handle input change event...
+}));
+```
+
+**React**
+
+```jsx
+import React, { Component } from 'react';
+import { withTargetValue } from 'browser-event-utils';
+
+class MyInput extends Component {
+
+    handleChange = withTargetValue((value, event) => {
+        console.log(`Value changed! ${value}`);
+    });
+
+    render() {
+        return (
+            <input onChange={this.handleChange} />
         );
     }
 }

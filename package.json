@@ -26,6 +26,7 @@
         "test:coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
         "viewCoverage": "npm run test:js && open ./coverage/lcov-report/index.html -a Google\\ Chrome",
         "test:watch": "jest --watch",
+        "ci": "npm run lint && npm run test:js",
         "test": "npm outdated && npm run lint && npm run test:js",
         "release": "np --no-yarn"
     },
@@ -34,7 +35,7 @@
         "@babel/preset-env": "^7.3.4",
         "babel-eslint": "^10.0.1",
         "coveralls": "^3.0.3",
-        "eslint": "^5.15.0",
+        "eslint": "^5.15.1",
         "eslint-config-7geese": "^2.2.0",
         "eslint-plugin-filenames": "^1.3.2",
         "eslint-plugin-import": "^2.16.0",
