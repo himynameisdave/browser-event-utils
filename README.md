@@ -1,7 +1,23 @@
-<div align="center">
-  <h1>browser-event-utils</h1>
-  <p style="font-style: italic;">🎟 A collection of higher-order functions for invoking common browser event methods.</p>
+<div align="center" margin="0 auto 20px">
+    <h1>browser-event-utils</h1>
+    <p style="font-style: italic;">🎟 A collection of higher-order functions for invoking common browser event methods.</p>
+    <div>
+        <a href='https://travis-ci.org/himynameisdave/browser-event-utils'>
+            <img src="https://api.travis-ci.org/himynameisdave/browser-event-utils.svg?branch=master" alt="Travis Badge" />
+        </a>
+        <a href='https://coveralls.io/github/himynameisdave/browser-event-utils?branch=master'>
+            <img src='https://coveralls.io/repos/github/himynameisdave/browser-event-utils/badge.svg?branch=master' alt='Coverage Status' />
+        </a>
+        <a href="https://bundlephobia.com/result?p=browser-event-utils">
+            <img src="https://img.shields.io/bundlephobia/min/browser-event-utils.svg" alt="Bundle size (minified)" />
+        </a>
+        <!-- <img src="https://img.shields.io/npm/dt/browser-event-utils.svg" alt="Downloads"> -->
+    </div>
 </div>
+
+---
+
+### Motivation
 
 How often do you call stuff like `event.preventDefault` or `event.stopPropagation` when handling events in client-side JavaScript? I bet it's pretty often.
 
@@ -50,11 +66,11 @@ You can use this with React like so:
 import { withPreventDefault } from 'browser-event-utils';
 
 //  Doing it directly in a function component
-const Button = ({ onClick }) => {
+const Button = ({ onClick }) => (
     <button onClick={withPreventDefault(onClick)}>
         My Button
     </button>
-};
+);
 
 //  Storing it as a class method
 class MyButton extends Component {
@@ -79,4 +95,4 @@ Feel free to [file an issue](https://github.com/himynameisdave/browser-event-uti
 
 ---
 
-_👌 Built by [Dave Lunny](http://himynameisdave.com) in the glorious year 2019._
+_👌 Built by [Dave Lunny](http://himynameisdave.com) in the wonderful year 2019._
