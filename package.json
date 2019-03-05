@@ -1,6 +1,6 @@
 {
     "name": "browser-event-utils",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A collection of higher-order functions for invoking common browser event methods",
     "keywords": [
         "utilities",
