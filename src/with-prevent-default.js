@@ -1,4 +1,4 @@
-import withEventFactory from './helpers/with-event-factory.js';
+import withEventFactory from './helpers/with-event-factory.ts';
 
 /**
  *  Accepts a function, to be called after calling event.preventDefault

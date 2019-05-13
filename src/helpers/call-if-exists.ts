@@ -4,6 +4,8 @@
  *  @param {String} method - the event method that you want to call
  *  @return {Function} event handler function
  */
-const callIfExists = (method) => (event) => !!(event && event[method]) && event[method]();
+const callIfExists = (method: string) => (event: any) : Function => {
+    return !!(event && event[method]) && event[method]();
+};
 
 export default callIfExists;

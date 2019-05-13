@@ -1,4 +1,4 @@
-import withEventFactory from '../with-event-factory.js';
+import withEventFactory from '../with-event-factory';
 
 
 describe('withEventFactory', () => {
