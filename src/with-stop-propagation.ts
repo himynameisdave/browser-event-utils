@@ -1,4 +1,4 @@
-import withEventFactory from './helpers/with-event-factory.ts';
+import withEventFactory from './helpers/with-event-factory';
 
 /**
  *  Accepts a function, to be called after calling event.stopPropagation
@@ -6,6 +6,6 @@ import withEventFactory from './helpers/with-event-factory.ts';
  *  @param {Function} - function to be called after event.stopPropagation
  *  @return {Function} - function which returns userland event handler
  */
-const withStopPropagation = withEventFactory('stopPropagation');
+const withStopPropagation : Function = withEventFactory('stopPropagation');
 
 export default withStopPropagation;
