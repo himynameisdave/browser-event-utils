@@ -4,12 +4,11 @@ import resolve from 'rollup-plugin-node-resolve';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
 
-// import pkg from './package.json';
 const pkg = require('./package.json');
 
 
 export default {
-    input: './src/index.js',
+    input: './src/index.ts',
     output: [
         {
             file: pkg.main,
