@@ -5,7 +5,7 @@
  *  @param {Function} fn - Consumer's handler function
  *  @return {Function} - event handler function
  */
-const withTargetValue = (fn: Function = () => {}) : Function => (event: any = {}) : Function => {
+const withTargetValue = (fn: Function = (): void => {}): Function => (event: any = {}): Function => {
     if (!event || !event.target) {
         return fn(undefined, event);
     }

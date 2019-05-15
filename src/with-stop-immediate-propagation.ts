@@ -6,6 +6,6 @@ import withEventFactory from './helpers/with-event-factory';
  *  @param {Function} - function to be called after event.stopImmediatePropagation
  *  @return {Function} - function which returns userland event handler
  */
-const withStopImmediatePropagation : Function = withEventFactory('stopImmediatePropagation');
+const withStopImmediatePropagation: Function = withEventFactory('stopImmediatePropagation');
 
 export default withStopImmediatePropagation;
