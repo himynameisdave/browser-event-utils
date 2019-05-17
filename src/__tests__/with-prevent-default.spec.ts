@@ -1,25 +1,25 @@
-import withStopPropagation from '../with-stop-propagation.js';
+import withPreventDefault from '../with-prevent-default';
 
 
-describe('withStopPropagation', () => {
+describe('withPreventDefault', () => {
     describe('when event handler is called', () => {
         it(`calls the user's provded function`, () => {
             const userHandler = jest.fn();
             const mockEvent = {
-                stopPropagation: jest.fn(),
+                preventDefault: jest.fn(),
             };
-            const eventHandler = withStopPropagation(userHandler);
+            const eventHandler = withPreventDefault(userHandler);
             eventHandler(mockEvent);
             expect(userHandler).toHaveBeenCalledWith(mockEvent);
         });
-        it(`calls stopPropagation method on the event`, () => {
+        it(`calls preventDefault method on the event`, () => {
             const userHandler = jest.fn();
             const mockEvent = {
-                stopPropagation: jest.fn(),
+                preventDefault: jest.fn(),
             };
-            const eventHandler = withStopPropagation(userHandler);
+            const eventHandler = withPreventDefault(userHandler);
             eventHandler(mockEvent);
-            expect(mockEvent.stopPropagation).toHaveBeenCalled();
+            expect(mockEvent.preventDefault).toHaveBeenCalled();
         });
     });
 });

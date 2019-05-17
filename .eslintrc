@@ -13,13 +13,19 @@
         "7geese/rules/promise/off",
         "7geese/rules/react/off",
         "7geese/rules/jest/on",
-        "7geese/rules/react-hooks/off"
+        "7geese/rules/react-hooks/off",
+        "plugin:@typescript-eslint/recommended"
     ],
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "sourceType": "module",
-        "allowImportExportEverywhere": true
+        "allowImportExportEverywhere": true,
+        "useJSXTextNode": true,
+        "project": "./tsconfig.json"
     },
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "rules": {
         "jest/prefer-called-with": "off"
     }

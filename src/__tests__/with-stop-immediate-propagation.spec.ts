@@ -1,4 +1,4 @@
-import withStopImmediatePropagation from '../with-stop-immediate-propagation.js';
+import withStopImmediatePropagation from '../with-stop-immediate-propagation';
 
 
 describe('withStopImmediatePropagation', () => {

@@ -18,10 +18,14 @@
     "module": "bin/index.esm.js",
     "browser": "bin/index.umd.js",
     "unpkg": "bin/index.umd.js",
+    "typings": "bin/index.d.js",
+    "files": [
+        "bin"
+    ],
     "scripts": {
-        "build": "rollup -c",
-        "lint": "eslint ./src/ --ext .js",
-        "lint:fix": "eslint ./src/ --ext .js --fix",
+        "build": "rm -rf ./bin/ && rollup -c rollup.config.ts",
+        "lint": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/*",
+        "lint:fix": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/* --fix",
         "test:js": "jest --coverage",
         "test:coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
         "viewCoverage": "npm run test:js && open ./coverage/lcov-report/index.html -a Google\\ Chrome",
@@ -33,6 +37,10 @@
     "devDependencies": {
         "@babel/core": "^7.4.4",
         "@babel/preset-env": "^7.4.4",
+        "@babel/preset-typescript": "^7.3.3",
+        "@types/jest": "^24.0.13",
+        "@typescript-eslint/eslint-plugin": "^1.9.0",
+        "@typescript-eslint/parser": "^1.9.0",
         "babel-eslint": "^10.0.1",
         "coveralls": "^3.0.3",
         "eslint": "^5.16.0",
@@ -42,11 +50,15 @@
         "eslint-plugin-jest": "^22.5.1",
         "jest": "^24.8.0",
         "np": "^5.0.1",
-        "rollup": "^1.11.3",
+        "rollup": "^1.12.1",
         "rollup-plugin-babel": "^4.3.2",
-        "rollup-plugin-commonjs": "^9.3.4",
-        "rollup-plugin-node-resolve": "^4.2.4",
-        "rollup-plugin-terser": "^4.0.4"
+        "rollup-plugin-commonjs": "^10.0.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.0.0",
+        "rollup-plugin-sourcemaps": "^0.4.2",
+        "rollup-plugin-terser": "^4.0.4",
+        "rollup-plugin-typescript2": "^0.21.0",
+        "typescript": "^3.4.5"
     },
     "browserslist": [
         "> 0.25%",

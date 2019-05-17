@@ -1,4 +1,4 @@
-import withTargetValue from '../with-target-value.js';
+import withTargetValue from '../with-target-value';
 
 
 describe('withTargetValue', () => {

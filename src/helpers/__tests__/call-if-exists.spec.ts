@@ -1,4 +1,4 @@
-import callIfExists from '../call-if-exists.js';
+import callIfExists from '../call-if-exists';
 
 
 describe('callIfExists', () => {
