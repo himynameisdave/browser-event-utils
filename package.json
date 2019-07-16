@@ -31,7 +31,7 @@
         "viewCoverage": "npm run test:js && open ./coverage/lcov-report/index.html -a Google\\ Chrome",
         "test:watch": "jest --watch",
         "ci": "npm run lint && npm run test:js",
-        "test": "npm outdated && npm run lint && npm run test:js",
+        "test": "npm run lint && npm run test:js",
         "release": "np --no-yarn"
     },
     "devDependencies": {
@@ -68,6 +68,6 @@
         "type": "git",
         "url": "git+https://github.com/himynameisdave/browser-event-utils.git"
     },
-    "homepage": "https://github.com/himynameisdave/browser-event-utils#readme",
+    "homepage": "https://himynameisdave.github.io/browser-event-utils/",
     "license": "MIT"
 }
