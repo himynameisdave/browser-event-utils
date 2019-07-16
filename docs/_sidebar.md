@@ -1,0 +1,8 @@
+- [Motivation](motivation.md)
+- [Installation](installation.md)
+- [API](usage.md)
+  - [`withPreventDefault`](with-prevent-default.md)
+  - [`withStopPropagation`](with-stop-propagation.md)
+  - [`withStopImmediatePropagation`](with-stop-immediate-propagation.md)
+  - [`withTargetValue`](with-target-value.md)
+- [Contributing](contributing.md)
