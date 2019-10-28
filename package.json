@@ -22,6 +22,7 @@
     "files": [
         "bin"
     ],
+    "sideEffects": false,
     "scripts": {
         "build": "rm -rf ./bin/ && rollup -c rollup.config.ts",
         "lint": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/*",
@@ -69,5 +70,6 @@
         "url": "git+https://github.com/himynameisdave/browser-event-utils.git"
     },
     "homepage": "https://himynameisdave.github.io/browser-event-utils/",
-    "license": "MIT"
+    "license": "MIT",
+    "private": false
 }
