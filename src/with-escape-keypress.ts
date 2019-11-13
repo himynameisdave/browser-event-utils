@@ -7,6 +7,6 @@ import { ESCAPE } from './constants/keys';
  *  @param {Function} - function to be called if 'Escape'
  *  @return {Function} - function which returns userland event handler
  */
-const withEscapeKeypress = withKeyPress(ESCAPE);
+const withEscapeKeyPress = withKeyPress(ESCAPE);
 
-export default withEscapeKeypress;
+export default withEscapeKeyPress;
