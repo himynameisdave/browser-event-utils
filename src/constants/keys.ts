@@ -1,18 +1,18 @@
 /**
  * Keyboard key constants
  */
-export const ENTER: string = 'Enter';
-export const ESC: string = 'Esc';
+export const ENTER = 'Enter';
+export const ESCAPE = 'Escape';
 
 
-const KEYS: Array<string> = [
+const KEYS: string[] = [
     ENTER,
-    ESC,
+    ESCAPE,
 ];
 
 /**
  * Typings for Keys
- * eg: 'Enter' | 'Esc'
+ * eg: 'Enter' | 'Escape'
  */
 const keys = [...KEYS] as const;
 export type KeysType = typeof keys[number];
