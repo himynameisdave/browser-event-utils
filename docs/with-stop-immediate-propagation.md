@@ -18,13 +18,15 @@ document.addEventListener(
 
 **React**
 
+_Note: Technically this will not do anything in React, as Sythetic events [do not have](https://reactjs.org/docs/events.html) a `stopImmediatePropagation` method._
+
 ```jsx
 import React, { Component } from "react";
 import { withStopImmediatePropagation } from "browser-event-utils";
 
 class MyButton extends Component {
   handleClick = withStopImmediatePropagation(event => {
-    console.log("Button was clicked, and preventDefault has been called!");
+    console.log("Button was clicked, and stopImmediatePropagation has been called!");
   });
 
   render() {
@@ -32,3 +34,5 @@ class MyButton extends Component {
   }
 }
 ```
+
+[![Edit with-stop-immediate-propagation (React)](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/with-stop-propagation-react-qnbb0?fontsize=14)
