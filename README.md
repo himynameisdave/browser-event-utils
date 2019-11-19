@@ -12,7 +12,7 @@
             <img src="https://img.shields.io/bundlephobia/min/browser-event-utils.svg" alt="Bundle size (minified)" />
         </a>
         <a href="https://www.npmjs.com/package/browser-event-utils">
-            <img src="https://img.shields.io/npm/dt/browser-event-utils.svg" alt="Downloads">
+            <img src="https://img.shields.io/npm/dm/browser-event-utils.svg" alt="Downloads">
         </a>
     </div>
 </div>
