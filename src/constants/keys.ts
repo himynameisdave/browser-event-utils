@@ -8,9 +8,9 @@ export type KeysType = 'Enter' | 'Escape'
 
 
 /**
- * Note: Removed this: Typings for Keys using an array of those 
+ * Note: Removed this: Typings for Keys using an array key strings
  * eg: 'Enter' | 'Escape'
- * @example 
+ * @example
  * const KEYS: string[] = [
  *     ENTER,
  *     ESCAPE,
