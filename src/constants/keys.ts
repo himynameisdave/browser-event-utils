@@ -4,17 +4,17 @@
 export const ENTER = 'Enter';
 export const ESCAPE = 'Escape';
 
+export type KeysType = 'Enter' | 'Escape'
 
-const KEYS: string[] = [
-    ENTER,
-    ESCAPE,
-];
 
 /**
- * Typings for Keys
+ * Note: Removed this: Typings for Keys using an array of those 
  * eg: 'Enter' | 'Escape'
+ * @example 
+ * const KEYS: string[] = [
+ *     ENTER,
+ *     ESCAPE,
+ * ];
+ * const keys = [...KEYS] as const;
+ * export type KeysType = typeof keys[number];
  */
-const keys = [...KEYS] as const;
-export type KeysType = typeof keys[number];
-
-export default KEYS;
