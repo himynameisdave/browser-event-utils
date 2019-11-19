@@ -1,14 +1,14 @@
-import withKeypress from '../with-keypress';
+import withKeyPress from '../with-keypress';
 import { ENTER } from '../../constants/keys';
 
 
-describe('withKeypress', () => {
+describe('withKeyPress', () => {
     it('calls the provided function if event.key is present', () => {
         const callback = jest.fn();
         const mockEvent: any = {
             key: ENTER,
         };     
-        const handler = withKeypress(ENTER)(callback);
+        const handler = withKeyPress(ENTER)(callback);
         handler(mockEvent);
         expect(callback).toBeCalledTimes(1);
     });
@@ -17,7 +17,7 @@ describe('withKeypress', () => {
         const mockEvent: any = {
             key: '__FAKE_KEY',
         };     
-        const handler = withKeypress(ENTER)(callback);
+        const handler = withKeyPress(ENTER)(callback);
         handler(mockEvent);
         expect(callback).not.toHaveBeenCalled();
     });
