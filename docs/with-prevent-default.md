@@ -32,3 +32,5 @@ class MyButton extends Component {
   }
 }
 ```
+
+[![Edit with-prevent-default (React)](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/competent-breeze-kmhf6?fontsize=14&hidenavigation=1)

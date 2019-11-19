@@ -32,3 +32,5 @@ class MyInput extends Component {
   }
 }
 ```
+
+[![Edit with-target-value (React)](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/with-stop-immediate-propagation-react-st3fz?fontsize=14)

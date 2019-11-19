@@ -32,3 +32,5 @@ class MyButton extends Component {
   }
 }
 ```
+
+[![Edit with-stop-propagation (React)](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/with-prevent-default-react-j34ch?fontsize=14)
