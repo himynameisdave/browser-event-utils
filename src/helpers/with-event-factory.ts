@@ -1,4 +1,5 @@
 import callIfExists from './call-if-exists';
+import { EventHandler } from '../index.d';
 
 /**
  *  Factory which returns the higher-order event handler function
@@ -6,7 +7,7 @@ import callIfExists from './call-if-exists';
  *  @param {Function} method - the event method which you want to call
  *  @return {Function} - function which accepts the consumer's event handler function and returns the final event handler function
  */
-const withEventFactory = (method: string = ''): Function => (fn: Function = (): null => null): Function => (event: any = {}): Function => {
+const withEventFactory = (method: string = '') => (fn: EventHandler): EventHandler => (event: KeyboardEvent) => {
     callIfExists(method)(event);
     return fn(event);
 };

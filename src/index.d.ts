@@ -1,1 +1,2 @@
-export type UserEventHandler = (event: KeyboardEvent) => void;
+export type EventHandler = (event: KeyboardEvent) => void;
+export type UserEventHandler = (fn: EventHandler) => EventHandler;
