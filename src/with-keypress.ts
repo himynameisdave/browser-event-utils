@@ -1,4 +1,4 @@
-import { UserEventHandler } from './index.d'
+import { UserEventHandler } from './index.d';
 
 /**
  * Generic withKeypress generator
