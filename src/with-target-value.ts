@@ -1,8 +1,4 @@
-import { EventHandler } from './index.d';
-
 export type WithTargetValue = (value: string | undefined, event: KeyboardEvent | InputEvent | any) => void;
-
-
 
 
 /**
