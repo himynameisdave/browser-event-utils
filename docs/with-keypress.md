@@ -9,10 +9,10 @@ import { withKeyPress } from "browser-event-utils";
 
 const withEscapeKeyPress = withKeyPress('Escape');
 
-document.addEventListener(
-  "click",
+inputElement.addEventListener(
+  "keydown",
   withEscapeKeyPress(event => { // 👈 Note that you still get the event object if you need it
-    //  ...handle click event...
+    //  ...handle keydown...
   })
 );
 ```
