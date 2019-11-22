@@ -5,4 +5,5 @@
   - [`withStopPropagation`](with-stop-propagation.md)
   - [`withStopImmediatePropagation`](with-stop-immediate-propagation.md)
   - [`withTargetValue`](with-target-value.md)
+  - [`withKeyPress`](with-keypress.md)
 - [Contributing](contributing.md)
