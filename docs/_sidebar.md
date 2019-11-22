@@ -5,7 +5,5 @@
   - [`withStopPropagation`](with-stop-propagation.md)
   - [`withStopImmediatePropagation`](with-stop-immediate-propagation.md)
   - [`withTargetValue`](with-target-value.md)
-  - [`withEnterKeyPress`](with-enter-keypress.md)
-  - [`withEscapeKeyPress`](with-escape-keypress.md)
-  - [`withSpaceKeyPress`](with-space-keypress.md)
+  - [`withKeyPress`](with-keypress.md)
 - [Contributing](contributing.md)

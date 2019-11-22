@@ -14,6 +14,9 @@
         <a href="https://www.npmjs.com/package/browser-event-utils">
             <img src="https://img.shields.io/npm/dm/browser-event-utils.svg" alt="Downloads">
         </a>
+        <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils?ref=badge_shield" alt="FOSSA Status">
+            <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils.svg?type=shield"/>
+        </a>
     </div>
 </div>
 
