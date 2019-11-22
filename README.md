@@ -8,12 +8,14 @@
         <a href='https://coveralls.io/github/himynameisdave/browser-event-utils?branch=master'>
             <img src='https://coveralls.io/repos/github/himynameisdave/browser-event-utils/badge.svg?branch=master' alt='Coverage Status' />
         </a>
-<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils.svg?type=shield"/></a>
         <a href="https://bundlephobia.com/result?p=browser-event-utils">
             <img src="https://img.shields.io/bundlephobia/min/browser-event-utils.svg" alt="Bundle size (minified)" />
         </a>
         <a href="https://www.npmjs.com/package/browser-event-utils">
             <img src="https://img.shields.io/npm/dm/browser-event-utils.svg" alt="Downloads">
+        </a>
+        <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils?ref=badge_shield" alt="FOSSA Status">
+            <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils.svg?type=shield"/>
         </a>
     </div>
 </div>
@@ -61,7 +63,3 @@ Feel free to [file an issue](https://github.com/himynameisdave/browser-event-uti
 ---
 
 _👌 Built by [Dave Lunny](http://himynameisdave.com) in the wonderful year 2019._
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fbrowser-event-utils?ref=badge_large)
