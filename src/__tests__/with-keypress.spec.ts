@@ -1,5 +1,4 @@
 import withKeyPress from '../with-keypress';
-import { ENTER } from '../constants/keys';
 
 
 describe('withKeyPress', () => {
