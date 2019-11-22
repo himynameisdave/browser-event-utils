@@ -3,8 +3,9 @@
  */
 export const ENTER = 'Enter';
 export const ESCAPE = 'Escape';
+export const SPACE = ' ';
 
-export type KeysType = 'Enter' | 'Escape'
+export type KeysType = 'Enter' | 'Escape' | ' '
 
 
 /**
@@ -14,6 +15,7 @@ export type KeysType = 'Enter' | 'Escape'
  * const KEYS: string[] = [
  *     ENTER,
  *     ESCAPE,
+ *     SPACE,
  * ];
  * const keys = [...KEYS] as const;
  * export type KeysType = typeof keys[number];

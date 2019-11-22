@@ -7,4 +7,5 @@
   - [`withTargetValue`](with-target-value.md)
   - [`withEnterKeyPress`](with-enter-keypress.md)
   - [`withEscapeKeyPress`](with-escape-keypress.md)
+  - [`withSpaceKeyPress`](with-space-keypress.md)
 - [Contributing](contributing.md)
