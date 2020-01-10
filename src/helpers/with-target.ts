@@ -11,7 +11,7 @@ export type TWithTarget = (fn: TWithTargetHandler) => EventHandler;
  *
  * @param fn Function which will be called with event.target (if it exists)
  */
-const withTarget: TWithTarget = (fn: TWithTargetHandler = noop): EventHandler => (event: EventType = {} as $TSFixMe): void => {
+const withTarget: TWithTarget = (fn: TWithTargetHandler = noop): EventHandler => (event: EventType): void => {
     return fn(event?.target, event);
 };
 
