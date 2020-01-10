@@ -1,6 +1,6 @@
 {
   "name": "browser-event-utils",
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "description": "A collection of higher-order functions for invoking common browser event methods",
   "keywords": [
     "utilities",
