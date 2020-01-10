@@ -10,7 +10,9 @@ const pkg = require('./package.json');
 const plugins = [
     json(),
     typescript({
-        useTsconfigDeclarationDir: true
+        useTsconfigDeclarationDir: true,
+        objectHashIgnoreUnknownHack: true,
+        clean: true,
     }),
     commonjs(),
     resolve(),
@@ -25,7 +27,7 @@ export default [
                 file: pkg.browser,
                 name: 'browserEventUtils',
                 format: 'umd',
-                sourcemap: true
+                sourcemap: true,
             },
         ],
         plugins: [
@@ -39,12 +41,12 @@ export default [
             {
                 file: pkg.module,
                 format: 'es',
-                sourcemap: true
+                sourcemap: true,
             },
             {
                 file: pkg.main,
                 format: 'commonjs',
-                sourcemap: true
+                sourcemap: true,
             }
         ],
         plugins,
