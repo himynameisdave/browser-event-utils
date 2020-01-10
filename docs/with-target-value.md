@@ -1,6 +1,6 @@
 ### withTargetValue
 
-Calls your provided event handler function with `event.target.value` as the first value (if it exists).
+Calls your provided event handler function with `event.target.value` as the first value (if it exists). Passes the `event` along as the second argument in case you need it.
 
 **Vanilla**
 
@@ -22,14 +22,12 @@ myInputNode.addEventListener(
 import React, { Component } from "react";
 import { withTargetValue } from "browser-event-utils";
 
-class MyInput extends Component {
-  handleChange = withTargetValue((value, event) => {
-    console.log(`Value changed! ${value}`);
-  });
+const handleChange = withTargetValue((value, event) => {
+  console.log(`Value changed! ${value}`);
+});
 
-  render() {
-    return <input onChange={this.handleChange} />;
-  }
+function MyInput() {
+  return <input type="text" onChange={handleChange} />;
 }
 ```
 
