@@ -4,6 +4,7 @@
   - [`withPreventDefault`](with-prevent-default.md)
   - [`withStopPropagation`](with-stop-propagation.md)
   - [`withStopImmediatePropagation`](with-stop-immediate-propagation.md)
-  - [`withTargetValue`](with-target-value.md)
   - [`withKeyPress`](with-keypress.md)
+  - [`withTargetChecked`](with-target-checked.md)
+  - [`withTargetValue`](with-target-value.md)
 - [Contributing](contributing.md)

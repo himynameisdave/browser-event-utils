@@ -7,7 +7,7 @@ Calls your provided event handler function with `event.target.checked` as the fi
 ```js
 import { withTargetChecked } from "browser-event-utils";
 
-myInputNode.addEventListener(
+myCheckboxNode.addEventListener(
   "change",
   withTargetChecked((checked, event) => {
     // 👈 Note that you still get the event object if you need it
