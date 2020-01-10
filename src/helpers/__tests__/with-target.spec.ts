@@ -10,6 +10,6 @@ describe('withTarget', () => {
         };
         const mock = jest.fn();
         withTarget(mock)(mockEvent);
-        expect(mock).toHaveBeenCalledWith(mockEvent);
+        expect(mock).toHaveBeenCalledWith(mockEvent.target, mockEvent);
     });
 });
