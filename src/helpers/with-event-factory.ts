@@ -1,4 +1,5 @@
 import callIfExists from './call-if-exists';
+import noop from './noop';
 import { EventType, EventHandler, UserEventHandler } from '../index.d';
 
 export type TWithEventFactory = (method: string) => UserEventHandler;
@@ -9,7 +10,7 @@ export type TWithEventFactory = (method: string) => UserEventHandler;
  *  @param {Function} method - the event method which you want to call
  *  @return {Function} - function which accepts the consumer's event handler function and returns the final event handler function
  */
-const withEventFactory: TWithEventFactory = (method: string = ''): UserEventHandler => (fn: EventHandler): EventHandler => (event: EventType): void => {
+const withEventFactory: TWithEventFactory = (method: string = ''): UserEventHandler => (fn: EventHandler = noop): EventHandler => (event: EventType = {} as any): void => {
     callIfExists(method)(event);
     return fn(event);
 };

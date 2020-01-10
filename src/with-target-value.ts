@@ -1,5 +1,9 @@
-export type WithTargetValue = (value: string | undefined, event: KeyboardEvent | InputEvent | any) => void;
+import withTarget from './helpers/with-target';
+import noop from './helpers/noop';
+import { EventType, EventHandler } from './index.d';
 
+
+export type TWithTargetValueHandler = (value: string | null, event: EventType) => void;
 
 /**
  *  Accepts a function, who's first argument is event.target.value (if exists),
@@ -8,11 +12,6 @@ export type WithTargetValue = (value: string | undefined, event: KeyboardEvent |
  *  @param {Function} fn - Consumer's handler function
  *  @return {Function} - event handler function
  */
-const withTargetValue = (fn: WithTargetValue) => (event: InputEvent | any) => {
-    if (!event || !event.target) {
-        return fn(undefined, event);
-    }
-    return fn(event.target.value, event);
-};
+const withTargetValue = (fn: TWithTargetValueHandler = noop): EventHandler => withTarget((target, event): void => fn(target?.value, event));
 
 export default withTargetValue;
