@@ -22,7 +22,7 @@
     ]
   },
   "include": [
-    "src"
+    "src/**/*.ts"
   ],
   "exclude": [
     "**/__tests__/*.ts"

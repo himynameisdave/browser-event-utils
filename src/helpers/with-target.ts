@@ -1,5 +1,7 @@
-import { EventType, EventHandler, $TSFixMe } from '../index.d';
 import noop from './noop';
+import {
+  EventType, EventHandler, $TSFixMe,
+} from '../index.d';
 
 
 export type TEventTarget = EventTarget | HTMLInputElement | $TSFixMe;
@@ -11,8 +13,6 @@ export type TWithTarget = (fn: TWithTargetHandler) => EventHandler;
  *
  * @param fn Function which will be called with event.target (if it exists)
  */
-const withTarget: TWithTarget = (fn: TWithTargetHandler = noop): EventHandler => (event: EventType): void => {
-    return fn(event?.target, event);
-};
+const withTarget: TWithTarget = (fn: TWithTargetHandler = noop): EventHandler => (event: EventType): void => fn(event?.target, event);
 
 export default withTarget;

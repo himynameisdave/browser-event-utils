@@ -8,8 +8,6 @@ npm install browser-event-utils
 yarn add browser-event-utils
 ```
 
-Add the `-S` flag if you want to save it to the `"dependencies"` section of your `package.json`.
-
 **Browser/UMD**
 
 If you want to just import this library directly in the browser, you can add the following script tag:
