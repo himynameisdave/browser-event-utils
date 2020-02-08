@@ -1,6 +1,11 @@
 import withTarget from './helpers/with-target';
 import noop from './helpers/noop';
-import { EventType, EventHandler } from './index.d';
+import {
+  EventType,
+  EventHandler,
+  $TSFixMe,
+} from './index.d';
+
 
 export type TWithTargetCheckedHandler = (value: string | null, event: EventType) => void;
 
@@ -11,6 +16,8 @@ export type TWithTargetCheckedHandler = (value: string | null, event: EventType)
  *  @param {Function} fn - Consumer's handler function
  *  @return {Function} - event handler function
  */
-const withTargetChecked = (fn: TWithTargetCheckedHandler = noop): EventHandler => withTarget((target, event): void => fn(target?.checked, event));
+const withTargetChecked = (fn: TWithTargetCheckedHandler = noop): EventHandler => { // eslint-disable-line arrow-body-style
+  return withTarget((target: EventTarget | $TSFixMe, event: EventType): void => fn(target?.checked, event));
+};
 
 export default withTargetChecked;

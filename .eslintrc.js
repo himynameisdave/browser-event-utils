@@ -3,7 +3,6 @@ module.exports = {
     "himynameisdave/configurations/babel-node",
     "himynameisdave/configurations/typescript"
   ],
-  // "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
     "tsconfigRootDir": __dirname,

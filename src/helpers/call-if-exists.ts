@@ -1,4 +1,9 @@
-import { EventType, EventHandler } from '../index.d';
+import {
+  EventType,
+  EventHandler,
+  $TSFixMe,
+} from '../index.d';
+
 
 export type TCallIfExists = (method: string) => EventHandler;
 /**
@@ -7,9 +12,8 @@ export type TCallIfExists = (method: string) => EventHandler;
  *  @param {string} method - the event method that you want to call
  *  @return {Function} event handler function
  */
-const callIfExists: TCallIfExists = (method: string = ''): EventHandler => (event: EventType): void => {
-    //  TODO: replace with optional chaining (eg: `?.`)
-    return !!(event && event[method]) && (event[method] as unknown as Function)();
+const callIfExists: TCallIfExists = (method: string = ''): EventHandler => (event: EventType): void => { // eslint-disable-line arrow-body-style
+  return (event?.[method] as $TSFixMe)?.(); // eslint-disable-line @typescript-eslint/no-unnecessary-condition
 };
 
 export default callIfExists;
