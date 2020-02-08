@@ -30,6 +30,8 @@ This ([~1kb](https://bundlephobia.com/result?p=browser-event-utils)) package aim
 
 Could you survive without this library? Absolutely. But I've found that in larger codebases, it can become cumbersome to always sprinkle `e.preventDefault()` calls all over the place. It adds complexity to your event handlers, which violates the [**Do One Thing (DOT)**](https://www.oreilly.com/library/view/programming-javascript-applications/9781491950289/ch02.html) principal, plus it _(in theory)_ could make your unit tests more complicated (if you care about asserting that event methods are called).
 
+This library can also help aleviate some of the pains surrounding [event pooling](https://reactjs.org/docs/events.html#event-pooling) in React.
+
 ### Installation
 
 This package is available on NPM, and you can install it with `npm` or `yarn`:
@@ -39,8 +41,6 @@ npm install browser-event-utils
 
 yarn add browser-event-utils
 ```
-
-Add the `-S` flag if you want to save it to the `"dependencies"` section of your `package.json`.
 
 **Browser/UMD**
 
