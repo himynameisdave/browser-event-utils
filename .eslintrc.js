@@ -21,6 +21,11 @@ module.exports = {
   },
   "rules": {
     "import/extensions": "off",
-    "jest/prefer-called-with": "off"
+    "jest/prefer-called-with": "off",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "max-len": ["warn", {
+      "code": 75,
+      "ignoreComments": true,
+    }]
   }
 }
