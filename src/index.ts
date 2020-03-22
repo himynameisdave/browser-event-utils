@@ -4,3 +4,4 @@ export { default as withStopImmediatePropagation } from './with-stop-immediate-p
 export { default as withTargetChecked } from './with-target-checked';
 export { default as withTargetValue } from './with-target-value';
 export { default as withKeyPress } from './with-keypress';
+export { default as withNumericTargetValue } from './with-numeric-target-value';
