@@ -20,11 +20,15 @@ module.exports = {
     },
   },
   "rules": {
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    '@typescript-eslint/no-unsafe-return': 'warn',
+    'node/no-unsupported-features/es-syntax': 'off',
+    'node/file-extension-in-import': 'off',
     "import/extensions": "off",
     "jest/prefer-called-with": "off",
-    "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    'arrow-body-style': 'off',
     "max-len": ["warn", {
-      "code": 75,
+      "code": 85,
       "ignoreComments": true,
     }]
   }

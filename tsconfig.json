@@ -12,10 +12,10 @@
     "strict": true,
     "sourceMap": true,
     "declaration": true,
+    "declarationDir": "bin/types",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "declarationDir": "bin/types",
     "outDir": "bin/",
     "typeRoots": [
       "node_modules/@types"

@@ -3,11 +3,11 @@ import noop from './helpers/noop';
 import {
   EventType,
   EventHandler,
-  $TSFixMe,
 } from './index.d';
 
 
-export type TWithNumericTargetValueHandler = (value: number | null, event: EventType) => void;
+export type TWithNumericTargetValueHandler =
+  (value: number | null, event?: EventType) => void;
 
 /**
  *  Accepts a function, who's first argument will be Number(event.target.value),
@@ -17,9 +17,9 @@ export type TWithNumericTargetValueHandler = (value: number | null, event: Event
  *  @return {Function} - event handler function
  */
 const withNumericTargetValue = (fn: TWithNumericTargetValueHandler = noop): EventHandler => {
-  return withTarget((target: EventTarget | $TSFixMe, event: EventType): void => {
+  return withTarget((target?: HTMLInputElement, event?: EventType): void => {
     const numericValue = Number(target?.value);
-    return fn(!isNaN(numericValue) ? numericValue : 0, event);
+    return fn(!Number.isNaN(numericValue) ? numericValue : 0, event);
   });
 };
 

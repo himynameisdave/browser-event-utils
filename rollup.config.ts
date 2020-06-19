@@ -11,7 +11,6 @@ const plugins = [
     json(),
     typescript({
         useTsconfigDeclarationDir: true,
-        objectHashIgnoreUnknownHack: true,
         clean: true,
     }),
     commonjs(),
