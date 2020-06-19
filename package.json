@@ -31,6 +31,7 @@
     "lint": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/* --report-unused-disable-directives",
     "lint:fix": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/* --fix",
     "test:js": "jest --coverage",
+    "test:pre-commit": "jest",
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "viewCoverage": "npm run test:js && open ./coverage/lcov-report/index.html -a Google\\ Chrome",
     "test:watch": "jest --watch",
@@ -56,7 +57,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^20.1.0",
+    "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "lint-staged": "^10.2.11",
     "np": "^6.2.4",
     "rollup": "^2.17.1",
     "rollup-plugin-babel": "^4.4.0",
@@ -67,6 +70,14 @@
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1",
     "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint ./ --fix --quiet && jest"
   },
   "browserslist": [
     "> 0.25%",
