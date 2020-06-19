@@ -5,7 +5,7 @@ import {
 
 
 export type TEventTarget = EventTarget | HTMLInputElement | $TSFixMe;
-export type TWithTargetHandler = (target: TEventTarget, event: EventType) => void;
+export type TWithTargetHandler = (target: TEventTarget, event?: EventType) => void;
 export type TWithTarget = (fn: TWithTargetHandler) => EventHandler;
 
 /**
@@ -13,6 +13,10 @@ export type TWithTarget = (fn: TWithTargetHandler) => EventHandler;
  *
  * @param fn Function which will be called with event.target (if it exists)
  */
-const withTarget: TWithTarget = (fn: TWithTargetHandler = noop): EventHandler => (event: EventType): void => fn(event?.target, event);
+const withTarget: TWithTarget = (fn: TWithTargetHandler = noop): EventHandler => {
+  return (event?: EventType): void => {
+    return fn(event?.target, event);
+  };
+};
 
 export default withTarget;
