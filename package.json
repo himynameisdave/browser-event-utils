@@ -31,7 +31,7 @@
     "lint": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/* --report-unused-disable-directives",
     "lint:fix": "eslint ./src/ --ext .ts --ignore-pattern **/__tests__/**/* --fix",
     "test:js": "jest --coverage",
-    "test:pre-commit": "jest",
+    "test:pre-commit": "jest && eslint --ignore-pattern **/__tests__/**/* --fix --quiet --report-unused-disable-directives",
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "viewCoverage": "npm run test:js && open ./coverage/lcov-report/index.html -a Google\\ Chrome",
     "test:watch": "jest --watch",
@@ -77,7 +77,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": "eslint ./ --fix --quiet && jest"
+    "*.ts": "npm run test:pre-commit"
   },
   "browserslist": [
     "> 0.25%",
